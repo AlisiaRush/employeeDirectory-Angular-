@@ -1,0 +1,32 @@
+<!--Remove default angular set up code from this file-->
+
+<!--The router outlet is a directive that allows you to create a view for navigation matching the routes a user selects. This is what makes angular a SPA app. It does not have to refresh every time the user navigates to a new page-->
+<router-outlet></router-outlet>
+
+<!--We will include the employees page here as a directive.-->
+<!--Directives are classes that add new or existing behavior to the template within an application -->
+
+<!-- In order to create a new component to insert here. We need to create a folder called components. It's important to organize your folder and file structure in the beginning of the app. Although as time goes on and the application grows larger, there may be times where updates may need to be made for a better design structure or a design pattern that makes more sense to the specific application-->
+
+<!--The CLI command for creating a new component is ng g c <The name of the component>-->
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-lg-10"><h1>Employees</h1></div>
+
+    <div class="col-lg-2">
+      <select>
+        <option>Option One</option>
+        <option>Option Tow</option>
+        <option>Option Three</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="employees col-12">EMPLOYEE CARDS HERE!</div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="employees col-12">PAGINATION</div>
+  </div>
+</div>

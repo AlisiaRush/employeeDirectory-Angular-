@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
+import { Employee } from './sharedModels/employee.model';
 import { EmployeeService } from './sharedServices/employee.service';
 
 @Component({
@@ -9,14 +10,19 @@ import { EmployeeService } from './sharedServices/employee.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  constructor(
-    private http: HttpClient,
-    private employeeService: EmployeeService
-  ) {}
+  constructor(private employeeService: EmployeeService) {}
 
   public departments$!: Observable<string[]>;
+  public employees$!: Observable<Employee[]>;
+  public originalEmployees: Employee[] = [];
 
   ngOnInit() {
     this.departments$ = this.employeeService.getDepartments();
+    this.employees$ = this.employeeService.getEmployees().pipe(
+      tap((employees) => {
+        this.originalEmployees = employees;
+        console.log(this.originalEmployees);
+      })
+    );
   }
 }

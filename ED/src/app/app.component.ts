@@ -21,7 +21,6 @@ export class AppComponent implements OnInit {
     this.employees$ = this.employeeService.getEmployees().pipe(
       tap((employees) => {
         this.originalEmployees = employees;
-        console.log(this.originalEmployees);
       })
     );
   }

@@ -1,0 +1,24 @@
+.content{
+  height:800px;
+}
+
+.card-body img{
+  width:100%;
+  border-radius:10px;
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+}
+.badge{
+  background: #dbeafe;
+}
+
+span.badge.vip{
+  background:#fde8de;
+  color:#c38956;
+}
+
+small{
+  font-size:12px;
+  color:#9fa2a5;
+}
+

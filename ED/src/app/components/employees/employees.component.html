@@ -33,3 +33,12 @@
     </div>
   </div>
 </div>
+
+<div class="row mt-5">
+  <div class="employees col-12">
+    <ed-pagination
+      [currentPage]="currentPage"
+      (pageChange)="updateStartAndEnd($event)"
+    ></ed-pagination>
+  </div>
+</div>

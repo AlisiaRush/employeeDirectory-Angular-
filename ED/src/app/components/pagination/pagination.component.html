@@ -1,0 +1,33 @@
+<div class="pagination justify-content-center">
+  <nav aria-label="pagination">
+    <ul class="pagination">
+      <li
+        [class.disabled]="currentPage === 1"
+        class="page-item"
+        (click)="updatePage(currentPage - 1)"
+      >
+        <button class="page-link shadow-none" aria-label="Previous">
+          <span class="material-symbols-outlined"> arrow_back</span>
+        </button>
+      </li>
+      <li
+        *ngFor="let page of pages"
+        [class.active]="currentPage === page"
+        class="page-item"
+        (click)="updatePage(page)"
+      >
+        <button class="page-link shadow-none">{{ page }}</button>
+      </li>
+
+      <li
+        [class.disabled]="currentPage === pages.length"
+        class="page-item"
+        (click)="updatePage(currentPage + 1)"
+      >
+        <button class="page-link shadow-none" aria-label="Next">
+          <span class="material-symbols-outlined"> arrow_forward</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>

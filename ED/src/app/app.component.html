@@ -14,7 +14,7 @@
     <div class="col-lg-10"><h1>Employees</h1></div>
 
     <div class="col-lg-2">
-      <select>
+      <select id="selectedDepartment" (change)="selectedDepartment($event)">
         <option value="">All Departments</option>
         <option
           *ngFor="let department of departments$ | async"
@@ -28,7 +28,7 @@
 
   <div class="row mt-5">
     <div class="employees col-12">
-      <ed-employees [employees]="originalEmployees"></ed-employees>
+      <ed-employees [employees]="filteredEmployees"></ed-employees>
     </div>
   </div>
 

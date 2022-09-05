@@ -4,16 +4,18 @@
       <div class="card-body">
         <div class="row">
           <div class="col-3">
-            <img src="" alt="image" />
+            <img src="{{ employee.avatar }}" alt="image" />
           </div>
           <div class="col-9 mt-3">
             <div class="card-title pb-0 mb-0">
               <h5>{{ employee.firstName }} {{ employee.lastName }}</h5>
-              <small>Employee Position</small>
+              <small>{{ employee.position }}</small>
             </div>
             <div class="row">
               <div class="col-3">
-                <span class="badge text-primary"> Employee Department </span>
+                <span class="badge text-primary">{{
+                  employee.department
+                }}</span>
               </div>
               <div class="col-2">
                 <span class="badge text-primary"> Married </span>

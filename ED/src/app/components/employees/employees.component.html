@@ -1,5 +1,8 @@
 <div class="row content">
-  <div class="col-6" *ngFor="let employee of employees">
+  <div
+    class="col-6"
+    *ngFor="let employee of employees | sort | slice: start:end"
+  >
     <div class="card p-2 m-2">
       <div class="card-body">
         <div class="row">

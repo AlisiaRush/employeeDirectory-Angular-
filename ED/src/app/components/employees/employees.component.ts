@@ -8,6 +8,8 @@ import { Employee } from 'src/app/sharedModels/employee.model';
 })
 export class EmployeesComponent implements OnInit {
   @Input() public employees!: Employee[];
+  public start = 0;
+  public end = 6;
 
   constructor() {}
 

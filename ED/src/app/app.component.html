@@ -15,7 +15,13 @@
 
     <div class="col-lg-2">
       <select>
-        <option>Option One</option>
+        <option value="">All Departments</option>
+        <option
+          *ngFor="let department of departments$ | async"
+          value="{{ department }}"
+        >
+          {{ department }}
+        </option>
       </select>
     </div>
   </div>

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class EmployeeService {
   constructor(private http: HttpClient) {}
 
-  private departmentUrl = '/api/v1/departments';
+  private departmentUrl = '/api/v2/departments';
 
   // get method for departments
 

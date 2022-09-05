@@ -1,5 +1,5 @@
 <div class="row content">
-  <div class="col-6">
+  <div class="col-6" *ngFor="let employee of employees">
     <div class="card p-2 m-2">
       <div class="card-body">
         <div class="row">
@@ -8,7 +8,7 @@
           </div>
           <div class="col-9 mt-3">
             <div class="card-title pb-0 mb-0">
-              <h5>First Name &nbsp; Last Name</h5>
+              <h5>{{ employee.firstName }} {{ employee.lastName }}</h5>
               <small>Employee Position</small>
             </div>
             <div class="row">

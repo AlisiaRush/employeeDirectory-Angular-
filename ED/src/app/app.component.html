@@ -28,9 +28,11 @@
 
   <div class="row mt-5">
     <div class="employees col-12">
-      <ed-employees></ed-employees>
+      <ed-employees [employees]="originalEmployees"></ed-employees>
     </div>
   </div>
+
+  <ng-container *ngIf="employees$ | async"></ng-container>
 
   <div class="row mt-5">
     <div class="employees col-12">PAGINATION</div>
